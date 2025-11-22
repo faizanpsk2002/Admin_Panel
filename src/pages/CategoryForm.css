@@ -1,0 +1,118 @@
+/* CategoryForm.css */
+
+.category-form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.category-form-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.category-form-container form div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-form-container label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+.category-form-container input[type="text"],
+.category-form-container textarea {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.category-form-container input[type="text"]:focus,
+.category-form-container textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  background-color: #fff;
+}
+
+.category-form-container textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.category-form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* ------------------ Mobile Responsiveness ------------------ */
+@media (max-width: 768px) {
+  .category-form-container {
+    max-width: 90%;
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  .category-form-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .category-form-container input[type="text"],
+  .category-form-container textarea {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .category-form-container button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-form-container {
+    max-width: 95%;
+    padding: 12px;
+    margin: 20px auto;
+  }
+
+  .category-form-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .category-form-container input[type="text"],
+  .category-form-container textarea {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .category-form-container button {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}

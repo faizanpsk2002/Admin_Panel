@@ -1,0 +1,135 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: black;
+  color: white;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Search bar styles */
+.header-search {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  flex: 1;
+  max-width: 400px;
+}
+
+.header-search input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.header-search button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-weight: 600;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-search button:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-search {
+    max-width: 150px;
+    margin: 0 0.5rem;
+    flex: 1 1 150px;
+  }
+
+  .header-search input {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .header-search button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .admin-header-right {
+    margin-top: 8px;
+    gap: 6px;
+  }
+}
+
+
+/* Optional: hide search bar on very small screens to save space */
+@media (max-width: 400px) {
+  .header-search {
+    display: none;
+  }
+}
+
+/* Hide hamburger by default */
+.mobile-hamburger {
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Show only on small screens */
+@media (max-width: 768px) {
+  .mobile-hamburger {
+    display: block;
+  }
+}
+
+/* Logout buttons */
+.admin-header-right .logout-btn {
+  margin-left: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-header-right .logout-btn:hover {
+  background-color: #c82333;
+}
+/* Add this after existing .header-search and .admin-header-right styles */
+
+.header-search {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  flex: 1 1 300px; /* allow shrinking but set a base size */
+  max-width: 400px;
+  min-width: 150px; /* don’t get too small */
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0; /* prevent shrinking */
+  margin-top: 8px; /* add a little spacing when wrapping */
+  width: auto;
+}
+
+
